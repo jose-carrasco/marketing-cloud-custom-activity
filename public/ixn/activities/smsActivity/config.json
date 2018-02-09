@@ -20,7 +20,7 @@
             "outArguments": [
             	{ "result":"" }
 			],			
-			"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/execute/",
+			"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/execute/",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -33,26 +33,26 @@
     	"applicationExtensionKey": "smsActivity",
         "defaults": { "priority": "4"},             
         "save": {
-        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/save/",
+        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/save/",
             "body": "",
             "verb": "POST",
             "useJwt": false
         },
         "publish": {
-        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/publish/",
+        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/publish/",
             "verb": "POST",
             "body": "",
             "useJwt": false
         },
         "validate": {
-        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/validate/",
+        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/validate/",
             "verb": "POST",
             "body": "",
             "useJwt": false            
         }
     },
     "edit": {
-    	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/",
+    	"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/",
         "height": 400,
         "width": 500
     }

@@ -61,7 +61,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.favicon());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname, 'public'));
 
 // Express in Development Mode
 if ('development' == app.get('env')) {
@@ -70,6 +70,9 @@ if ('development' == app.get('env')) {
 
 // HubExchange Routes
 app.get('/', routes.index );
+
+app.get('/config.json', routes.configFile);
+
 app.post('/login', tokenFromJWT, routes.login );
 app.post('/logout', routes.logout );
 
