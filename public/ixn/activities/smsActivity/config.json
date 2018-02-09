@@ -1,0 +1,59 @@
+{
+    "workflowApiVersion": "1.0",
+    "metaData": {
+        "version": "2.0",
+        "icon": "images/jb-icon.jpg",
+        "iconSmall": "images/jb-icon.jpg"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "Actividad para enviar SMS",
+            "description": "Actividad para enviar un SMS a través de TIBCO"
+        }
+    },
+    "arguments": {
+        "execute": {       
+			"inArguments":[
+				{ "emailAddress": "{{Contact.Default.Email}}"}							
+			],
+            "outArguments": [
+            	{ "result":"" }
+			],			
+			"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/execute/",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+    	"applicationExtensionKey": "smsActivity",
+        "defaults": { "priority": "4"},             
+        "save": {
+        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/save/",
+            "body": "",
+            "verb": "POST",
+            "useJwt": false
+        },
+        "publish": {
+        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/publish/",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false
+        },
+        "validate": {
+        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/validate/",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false            
+        }
+    },
+    "edit": {
+    	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/smsActivity/",
+        "height": 400,
+        "width": 500
+    }
+}
