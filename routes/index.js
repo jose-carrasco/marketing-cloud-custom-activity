@@ -52,8 +52,8 @@ exports.configFile = function(req, res){
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "Actividad para enviar SMS",
-            "description": "Actividad para enviar un SMS a través de TIBCO"
+            "name": "Actividad para enviar notificaciones",
+            "description": "Actividad para enviar notificaciones"
         }
     },
     "arguments": {
@@ -62,9 +62,9 @@ exports.configFile = function(req, res){
 				{ "emailAddress": "{{Contact.Default.Email}}"}							
 			],
             "outArguments": [
-            	{ "result":"" }
+            	{ "exitoso": true }
 			],			
-			"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/execute/",
+			"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/execute/",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -74,22 +74,22 @@ exports.configFile = function(req, res){
         }
     },
     "configurationArguments": {
-    	"applicationExtensionKey": "smsActivity",
+    	"applicationExtensionKey": "notifications",
         "defaults": { "priority": "4"},             
         "save": {
-        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/save/",
+        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/save/",
             "body": "",
             "verb": "POST",
             "useJwt": false
         },
         "publish": {
-        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/publish/",
+        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/publish/",
             "verb": "POST",
             "body": "",
             "useJwt": false
         },
         "validate": {
-        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/validate/",
+        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/validate/",
             "verb": "POST",
             "body": "",
             "useJwt": false            
@@ -103,17 +103,3 @@ exports.configFile = function(req, res){
 }
 	));
 };
-
-function readJSONFile(filename, callback) {
-  fs.readFile(filename, function (err, data) {
-    if(err) {
-      callback(err);
-      return;
-    }
-    try {
-      callback(null, JSON.parse(data));
-    } catch(exception) {
-      callback(exception);
-    }
-  });
-}

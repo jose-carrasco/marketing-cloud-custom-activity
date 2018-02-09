@@ -87,7 +87,10 @@ app.post('/ixn/activities/update-case/validate/', activityUpdate.validate );
 app.post('/ixn/activities/update-case/publish/', activityUpdate.publish );
 app.post('/ixn/activities/update-case/execute/', activityUpdate.execute );
 
-app.post('/notifications', notifications.save );
+app.post('/notifications/save/', notifications.save);
+app.post('/notifications/validate/', notifications.validate);
+app.post('/notifications/publish/', notifications.publish);
+app.post('/notifications/execute/', notifications.execute );
 
 app.get('/clearList', function( req, res ) {
 	// The client makes this request to get the data
