@@ -46,14 +46,14 @@ exports.configFile = function(req, res){
     "workflowApiVersion": "1.0",
     "metaData": {
         "version": "2.0",
-        "icon": "images/jb-icon.jpg",
-        "iconSmall": "images/jb-icon.jpg"
+        "icon": "images/jb-icon.png",
+        "iconSmall": "images/jb-icon.png"
     },
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "Actividad para enviar notificaciones",
-            "description": "Actividad para enviar notificaciones"
+            "name": "Portal WEB",
+            "description": "Actividad para enviar notificaciones al portal web."
         }
     },
     "arguments": {
@@ -96,7 +96,7 @@ exports.configFile = function(req, res){
         }
     },
     "edit": {
-    	"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/",
+    	"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/edit/",
         "height": 400,
         "width": 500
     }
