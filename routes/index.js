@@ -17,7 +17,7 @@ exports.index = function(req, res){
         });
     } else {
         res.render( 'index', {
-            title: 'Journey Builder Activity Example: Desk.com API',
+            title: 'Journey Builder Activity PORTAL WEB',
             results: activityUtils.logExecuteData,
         });
     }
@@ -32,74 +32,3 @@ exports.logout = function( req, res ) {
     req.session.token = '';
 };
 
-
-/*
- * Exports config file
-*/
-
-/*
- * GET config file.
- */
-exports.configFile = function(req, res){
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({
-    "workflowApiVersion": "1.0",
-    "metaData": {
-        "version": "2.0",
-        "icon": "images/jb-icon.png",
-        "iconSmall": "images/jb-icon.png"
-    },
-    "type": "REST",
-    "lang": {
-        "en-US": {
-            "name": "Portal WEB",
-            "description": "Actividad para enviar notificaciones al portal web."
-        }
-    },
-    "arguments": {
-        "execute": {       
-			"inArguments":[
-				{ "emailAddress": "{{Contact.Default.Email}}"}							
-			],
-            "outArguments": [
-            	{ "exitoso": true }
-			],			
-			"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/execute/",
-            "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": false,
-            "timeout": 10000
-        }
-    },
-    "configurationArguments": {
-    	"applicationExtensionKey": "notifications",
-        "defaults": { "priority": "4"},             
-        "save": {
-        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/save/",
-            "body": "",
-            "verb": "POST",
-            "useJwt": false
-        },
-        "publish": {
-        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/publish/",
-            "verb": "POST",
-            "body": "",
-            "useJwt": false
-        },
-        "validate": {
-        	"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/validate/",
-            "verb": "POST",
-            "body": "",
-            "useJwt": false            
-        }
-    },
-    "edit": {
-    	"url": "https://marketing-cloud-ws-dev.herokuapp.com/notifications/edit/",
-        "height": 400,
-        "width": 500
-    }
-}
-	));
-};

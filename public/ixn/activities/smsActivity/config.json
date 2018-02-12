@@ -20,7 +20,7 @@
             "outArguments": [
             	{ "result":"" }
 			],			
-			"url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/smsActivity/execute/",
+			"url": "https://marketing-cloud-ws-dev.herokuapp.com/notificatio/execute/",
             "verb": "POST",
             "body": "",
             "header": "",

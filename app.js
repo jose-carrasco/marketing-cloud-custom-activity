@@ -71,8 +71,6 @@ if ('development' == app.get('env')) {
 // HubExchange Routes
 app.get('/', routes.index );
 
-app.get('/config.json', routes.configFile);
-
 app.post('/login', tokenFromJWT, routes.login );
 app.post('/logout', routes.logout );
 
@@ -91,6 +89,8 @@ app.post('/notifications/save/', notifications.save);
 app.post('/notifications/validate/', notifications.validate);
 app.post('/notifications/publish/', notifications.publish);
 app.post('/notifications/execute/', notifications.execute );
+app.post('/notifications/edit/', notifications.edit );
+
 
 app.get('/clearList', function( req, res ) {
 	// The client makes this request to get the data
