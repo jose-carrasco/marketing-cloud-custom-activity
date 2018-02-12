@@ -89,7 +89,7 @@ app.post('/notifications/save/', notifications.save);
 app.post('/notifications/validate/', notifications.validate);
 app.post('/notifications/publish/', notifications.publish);
 app.post('/notifications/execute/', notifications.execute );
-app.post('/notifications/edit/', notifications.edit );
+app.get('/notifications/edit/', notifications.edit );
 
 
 app.get('/clearList', function( req, res ) {
