@@ -7,13 +7,13 @@ requirejs.config({
         'vendor/jquery.min': {
             exports: '$'
         },
-		'smsActivity': {
+		'portalweb': {
 			deps: ['vendor/jquery.min', 'vendor/postmonger']
 		}
     }
 });
 
-requirejs( ['vendor/jquery.min', 'smsActivity'], function( $, smsActivity ) {
+requirejs( ['vendor/jquery.min', 'portalweb'], function( $, portalweb ) {
 	//console.log( 'REQUIRE LOADED' );
 });
 
