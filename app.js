@@ -7,10 +7,9 @@ var JWT         = require('./lib/jwtDecoder');
 var path        = require('path');
 var request     = require('request');
 var routes      = require('./routes');
-var notifications   = require('./routes/notifications');
-var activityCreate   = require('./routes/activityCreate');
-var activityUpdate   = require('./routes/activityUpdate');
 var activityUtils    = require('./routes/activityUtils');
+//Actividad de envío de SMS
+var portalweb = require('./routes/portalweb');
 var pkgjson = require( './package.json' );
 
 var app = express();
@@ -20,10 +19,10 @@ var app = express();
 
 
 var APIKeys = {
-    appId           : 'ecad721b-9645-4d52-ba4e-03ad3a03051e',
-    clientId        : 'jj7ph4mle7s57o3zm473eyjd',
-    clientSecret    : '1p3q9AtQZY2l2Qrp6eC8h4Ka',
-    appSignature    : 'oP7qBTgJj5N1deQ4CdaL-SoAKiePVmz7JCWFQQCOGOLhST9B4Ne5vPci_Sb8MGSTrkrc7jSS2zV0XeWA3SIu6IrB6NKyLUcrV5Eg9g37csj7T0bFoL4sy1Vc1nMWi8onXf66DSDFzV2pjAKlwdVROjFUONECTnuB0PaRkImq81Hp785-eJ2UuN7aKka7uvKOQssQsFDqM4afhNOO2hRLWGhn179s2LXN9SW1F4F-JGccoaTAjR_rpYp_iIQxWg2',
+    appId           : '3c88d960-1994-42b7-877d-880996c9b609',
+    clientId        : 'zz9mmsxdsycdztnxkxc9h61x',
+    clientSecret    : 'EJS8MPZlE5HWFXONR4lTUi43',
+    appSignature    : 'yawlk4wlmdsbe3r0o54cy2dzbii5tolb205srowskmkpdkvjwyrz0n0ttvss22hf5n5svscqbkhobhbsdfb3zjsj1j0iievepdzk50im0ukhi4rfo5d0xxkq5olyqrf0fyfqd4z32qgsqic0npylynjk0gplwnbz5xufpbenteetithfkp0u5g1xtcphtrp24riyjwlb2qycqwe0cdkk3yly1vfpyyecicz00i5kfvdt4xkl32kegp35tvecysv',
     authUrl         : 'https://auth.exacttargetapis.com/v1/requestToken?legacy=1'
 };
 
@@ -61,7 +60,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.favicon());
 app.use(app.router);
-app.use(express.static(__dirname, 'public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Express in Development Mode
 if ('development' == app.get('env')) {
@@ -70,27 +69,14 @@ if ('development' == app.get('env')) {
 
 // HubExchange Routes
 app.get('/', routes.index );
-
 app.post('/login', tokenFromJWT, routes.login );
 app.post('/logout', routes.logout );
 
-// Custom Activity Routes for interacting with Desk.com API
-app.post('/ixn/activities/create-case/save/', activityCreate.save );
-app.post('/ixn/activities/create-case/validate/', activityCreate.validate );
-app.post('/ixn/activities/create-case/publish/', activityCreate.publish );
-app.post('/ixn/activities/create-case/execute/', activityCreate.execute );
-
-app.post('/ixn/activities/update-case/save/', activityUpdate.save );
-app.post('/ixn/activities/update-case/validate/', activityUpdate.validate );
-app.post('/ixn/activities/update-case/publish/', activityUpdate.publish );
-app.post('/ixn/activities/update-case/execute/', activityUpdate.execute );
-
-app.post('/notifications/save/', notifications.save);
-app.post('/notifications/validate/', notifications.validate);
-app.post('/notifications/publish/', notifications.publish);
-app.post('/notifications/execute/', notifications.execute );
-app.get('/notifications/edit/', notifications.edit );
-
+//Actividades de envío de SMS
+app.post('/ixn/activities/portalweb/save',portalweb.save);
+app.post('/ixn/activities/portalweb/validate',portalweb.validate);
+app.post('/ixn/activities/portalweb/publish',portalweb.publish);
+app.post('/ixn/activities/portalweb/execute',portalweb.execute);
 
 app.get('/clearList', function( req, res ) {
 	// The client makes this request to get the data

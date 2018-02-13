@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Enviar un Mensaje SMS</title>
+	<script data-main="js/main.js" src="js/require.js"></script>
+
+	<!--Styles-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+	<div id="step1" class="step">
+	<p><small id="version"></small></p>
+	<p/>
+	<h1Página de Configuración de Envío de Mensajes</h1>
+	<p>Esta va a ser la página de configuración de SMS</p>
+	<p/>        
+		Seleccione el canal a través del cual va a enviar el mensaje: 
+		<select id="selectPriority">
+			<option value="">Select an option</option>
+			<option value="1">SMS</option>
+			<option value="2">ATM</option>
+			<option value="3">Correo Directo</option>
+			<option value="4">Sucursales</option>
+			<option value="5">Web</option>
+		</select>
+		<br/><br/>
+		Ingrese el mensaje que se va a enviar: <input type="text" id="smsMessage" name="smsMessage" value=""/>
+	</div>
+	<div id="step2" class="step">
+		<p>Por favor revise su configuración.</p>
+		<p/>
+		Canal: <div id="showPriority"></div>
+	</div>			
+</body>
+</html>

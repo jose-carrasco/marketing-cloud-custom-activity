@@ -1,0 +1,75 @@
+{
+  "workflowApiVersion": "1.0",
+  "metaData": {
+    "version": "2.0",
+    "icon": "images/jb-icon.jpg",
+    "iconSmall": "images/jb-icon.jpg"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Portal WEB",
+      "description": "Prueba de portal web"
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments":[
+        { "emailAddress": "{{Contact.Default.Email}}"}
+      ],
+      "outArguments": [
+        { "result":"" }
+      ],
+      "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/execute/",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": false,
+      "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "ecad721b-9645-4d52-ba4e-03ad3a03051e",
+    "defaults": { "priority": "4"},
+    "save": {
+      "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/save/",
+      "body": "",
+      "verb": "POST",
+      "useJwt": false
+    },
+    "publish": {
+      "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/publish/",
+      "verb": "POST",
+      "body": "",
+      "useJwt": false
+    },
+    "validate": {
+      "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/validate/",
+      "verb": "POST",
+      "body": "",
+      "useJwt": false
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "outArguments": [
+          {
+            "key": {
+              "dataType": "Text",
+              "isNullable": false,
+              "access": "Visible",
+              "direction": "Out"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "edit": {
+    "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/",
+    "height": 400,
+    "width": 500
+  }
+}

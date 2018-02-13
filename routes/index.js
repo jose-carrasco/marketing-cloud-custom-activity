@@ -1,11 +1,7 @@
 'use strict';
-var fs = require('fs');
 
 // Deps
 var activityUtils = require('./activityUtils');
-var activityCreate = require('./activityCreate');
-var activityUpdate = require('./activityUpdate');
-
 /*
  * GET home page.
  */
@@ -17,7 +13,7 @@ exports.index = function(req, res){
         });
     } else {
         res.render( 'index', {
-            title: 'Journey Builder Activity PORTAL WEB',
+            title: 'Journey Builder Activity Example: Desk.com API',
             results: activityUtils.logExecuteData,
         });
     }
