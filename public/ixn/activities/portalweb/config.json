@@ -1,5 +1,5 @@
 {
-  "workflowApiVersion": "1.0",
+  "workflowApiVersion": "1.1",
   "metaData": {
     "version": "2.0",
     "icon": "images/jb-icon.jpg",
@@ -20,7 +20,7 @@
       "outArguments": [
         { "result":"" }
       ],
-      "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/execute/",
+      "url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/portalweb/execute/",
       "verb": "POST",
       "body": "",
       "header": "",
@@ -33,19 +33,19 @@
     "applicationExtensionKey": "ecad721b-9645-4d52-ba4e-03ad3a03051e",
     "defaults": { "priority": "4"},
     "save": {
-      "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/save/",
+      "url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/portalweb/save/",
       "body": "",
       "verb": "POST",
       "useJwt": false
     },
     "publish": {
-      "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/publish/",
+      "url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/portalweb/publish/",
       "verb": "POST",
       "body": "",
       "useJwt": false
     },
     "validate": {
-      "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/validate/",
+      "url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/portalweb/validate/",
       "verb": "POST",
       "body": "",
       "useJwt": false
@@ -68,7 +68,7 @@
     }
   },
   "edit": {
-    "url": "https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb/",
+    "url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/portalweb/",
     "height": 400,
     "width": 500
   }
