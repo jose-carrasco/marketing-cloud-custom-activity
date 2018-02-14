@@ -2,36 +2,62 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Enviar un Mensaje SMS</title>
+	<meta charset="utf-8">
+	<title>Create notification - Portal WEB</title>
+	<script type="text/javascript" src="vendor/jquery.min.js"></script>
 	<script data-main="js/main.js" src="js/require.js"></script>
 
 	<!--Styles-->
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 <body>
-	<div id="step1" class="step">
+<div id="step1" class="step">
 	<p><small id="version"></small></p>
 	<p/>
-	<h1Página de Configuración de Envío de Mensajes</h1>
-	<p>Esta va a ser la página de configuración de SMS</p>
-	<p/>        
-		Seleccione el canal a través del cual va a enviar el mensaje: 
-		<select id="selectPriority">
-			<option value="">Select an option</option>
-			<option value="1">SMS</option>
-			<option value="2">ATM</option>
-			<option value="3">Correo Directo</option>
-			<option value="4">Sucursales</option>
-			<option value="5">Web</option>
-		</select>
-		<br/><br/>
-		Ingrese el mensaje que se va a enviar: <input type="text" id="smsMessage" name="smsMessage" value=""/>
-	</div>
-	<div id="step2" class="step">
-		<p>Por favor revise su configuración.</p>
-		<p/>
-		Canal: <div id="showPriority"></div>
-	</div>			
+	<h1>Create a notification PORTAL WEB</h1>
+	<p>This Activity creates a notification.</p>
+	<p/>
+	<table>
+		<tr>
+			<td><label>ID User</label></td>
+			<td><input type="text" id="idUser"/></td>
+		</tr>
+		<tr>
+			<td><label>ID Campa&ntilde;a</label></td>
+			<td><input type="text" id="idCampana"/></td>
+		</tr>
+		<tr>
+			<td><label>ID Mensaje</label></td>
+			<td><input type="text" id="idMensaje"/></td>
+		</tr>
+		<tr>
+			<td><label>Mensaje</label></td>
+			<td><textarea id="mensaje"></textarea></td>
+		</tr>
+		<tr>
+			<td><label>listParameters</label></td>
+			<td><input type="text" id="listParameters"/></td>
+		</tr>
+		<tr>
+			<td>Seleccione el canal a través del cual va a enviar el mensaje:
+			</td>
+			<td>
+				<select id="selectChannel">
+					<option value="">Select an option</option>
+					<option value="1">SMS</option>
+					<option value="2">ATM</option>
+					<option value="3">Correo Directo</option>
+					<option value="4">Sucursales</option>
+					<option value="5">Web</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="step2" class="step">
+	<p>Please review your settings.</p>
+	<p/>
+	Priority: <div id="showChannel"></div>
+</div>
 </body>
 </html>
