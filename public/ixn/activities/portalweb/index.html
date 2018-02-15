@@ -19,14 +19,6 @@
 	<p/>
 	<table>
 		<tr>
-			<td><label>ID User</label></td>
-			<td><input type="text" id="idUser"/></td>
-		</tr>
-		<tr>
-			<td><label>ID Campa&ntilde;a</label></td>
-			<td><input type="text" id="idCampana"/></td>
-		</tr>
-		<tr>
 			<td><label>ID Mensaje</label></td>
 			<td><input type="text" id="idMensaje"/></td>
 		</tr>
@@ -38,26 +30,15 @@
 			<td><label>listParameters</label></td>
 			<td><input type="text" id="listParameters"/></td>
 		</tr>
-		<tr>
-			<td>Seleccione el canal a través del cual va a enviar el mensaje:
-			</td>
-			<td>
-				<select id="selectChannel">
-					<option value="">Select an option</option>
-					<option value="1">SMS</option>
-					<option value="2">ATM</option>
-					<option value="3">Correo Directo</option>
-					<option value="4">Sucursales</option>
-					<option value="5">Web</option>
-				</select>
-			</td>
-		</tr>
+
 	</table>
 </div>
 <div id="step2" class="step">
-	<p>Please review your settings.</p>
+	<p>Por favor, revise los valores a enviar:</p>
 	<p/>
-	Priority: <div id="showChannel"></div>
+	<p>ID Mensaje: <div id="showIdMensaje"></div></p>
+	<p>Mensaje: <div id="showMensaje"></div></p>
+	<p>listParameters: <div id="showListParameters"></div></p>
 </div>
 </body>
 </html>

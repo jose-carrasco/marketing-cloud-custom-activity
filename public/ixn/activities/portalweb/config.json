@@ -15,7 +15,9 @@
   "arguments": {
     "execute": {
       "inArguments":[
-        { "emailAddress": "{{Contact.Default.Email}}"}
+        { "idUser": "{{Contact.IdCliente}}",
+          "idCampana": "{Campaign}"
+        }
       ],
       "outArguments": [
         { "result":"" }
