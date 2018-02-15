@@ -47,19 +47,10 @@ exports.validate = function( req, res ) {
 /*
  * POST Handler for /execute/ route of Activity.
  */
-exports.execute = function( req, res ) {
-    // Data from the req and put it in an array accessible to the main app.
-    activityUtils.logData( req );
-
-    todosController.create
-    
-    res.send( 200, {"result":"ok"});
-};
-
 
 exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     activityUtils.logData( req );
     notificationsController.create(req, res);
-
+    res.send( 201, {"exitoso":true});
 };
