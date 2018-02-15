@@ -1,0 +1,14 @@
+{
+  "development": {
+    "username": "marketing",
+    "password": "trustno1",
+    "database": "marketing_cloud_dev",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "production": {
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL"
+  }
+}
