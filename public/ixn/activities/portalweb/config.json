@@ -15,12 +15,13 @@
   "arguments": {
     "execute": {
       "inArguments":[
-        { "idUser": "{{Capacitacion Clientes Sergio.Default.IdCliente}}",
-          "idCampana": "{{Capacitacion Clientes Sergio.Default.Nombre}}"
+        { "idUser": "UserId",
+          "idCampana": "Campana",
+          "idMensaje": "MensajeId"
         }
       ],
       "outArguments": [
-        { "result":"" }
+        { "exitoso":"true" }
       ],
       "url": "https://marketing-cloud-ws-dev.herokuapp.com/ixn/activities/portalweb/execute/",
       "verb": "POST",

@@ -128,6 +128,7 @@ define( function( require ) {
         toJbPayload['arguments'].execute.inArguments.push({"mensaje": mensaje});
         toJbPayload['arguments'].execute.inArguments.push({"listParameters": listParameters});
 
+        console.log(toJbPayload['arguments']);
 		/*
         toJbPayload['metaData'].things = 'stuff';
         toJbPayload['metaData'].icon = 'path/to/icon/set/from/iframe/icon.png';
