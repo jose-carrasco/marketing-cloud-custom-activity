@@ -2,13 +2,13 @@ const Notification = require('../models').Notification;
 const Parameter = require('../models').Parameter;
 
 module.exports = {
-    create(req, res) {
+    create(notification, res) {
         return Notification
             .create({
-                idUser: req.body.idUser,
-                idCampana: req.body.idCampana,
-                mensaje: req.body.mensaje,
-                idMensaje: req.body.idMensaje
+                idUser: notification.idUser,
+                idCampana: notification.idCampana,
+                mensaje: notification.mensaje,
+                idMensaje: notification.idMensaje
             })
             .then(notification => res.status(201).send(notification))
             .catch(error => res.status(400).send(error));

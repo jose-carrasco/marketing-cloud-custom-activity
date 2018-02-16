@@ -4,6 +4,7 @@
     <list default="true" id="424e4a5c-4a53-46cc-9dfd-b116d9f40fd6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/routes/portalweb.js" afterPath="$PROJECT_DIR$/routes/portalweb.js" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/notifications.js" afterPath="$PROJECT_DIR$/server/controllers/notifications.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +21,8 @@
       <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/ixn/activities/portalweb/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="184">
+              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -50,8 +51,8 @@
       <file leaf-file-name="notifications.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/controllers/notifications.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="136">
+              <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -60,8 +61,8 @@
       <file leaf-file-name="portalweb.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/portalweb.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            <state relative-caret-position="328">
+              <caret line="57" column="40" lean-forward="true" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -88,6 +89,7 @@
       <find>toJbPayload</find>
       <find>swh</find>
       <find>getChannel</find>
+      <find>outArguments</find>
     </findStrings>
     <replaceStrings>
       <replace>https://marketing-cloud-ws-dev.herokuapp.com/activities/portalweb</replace>
@@ -113,12 +115,12 @@
         <option value="$PROJECT_DIR$/server/controllers/notification.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/server/controllers/notifications.js" />
         <option value="$PROJECT_DIR$/server/controllers/index.js" />
         <option value="$PROJECT_DIR$/server/models/index.js" />
         <option value="$PROJECT_DIR$/public/ixn/activities/portalweb/index.html" />
         <option value="$PROJECT_DIR$/public/ixn/activities/portalweb/js/portalweb.js" />
         <option value="$PROJECT_DIR$/public/ixn/activities/portalweb/config.json" />
+        <option value="$PROJECT_DIR$/server/controllers/notifications.js" />
         <option value="$PROJECT_DIR$/routes/portalweb.js" />
       </list>
     </option>
@@ -296,12 +298,12 @@
       <option name="presentableId" value="Default" />
       <updated>1518475147343</updated>
       <workItem from="1518475155873" duration="14243000" />
-      <workItem from="1518710811243" duration="21712000" />
+      <workItem from="1518710811243" duration="22643000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35955000" />
+    <option name="totallyTimeSpent" value="36886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -589,24 +591,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/ixn/activities/portalweb/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="184">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/notifications.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="136">
+          <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/portalweb.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        <state relative-caret-position="328">
+          <caret line="57" column="40" lean-forward="true" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
           <folding />
         </state>
       </provider>

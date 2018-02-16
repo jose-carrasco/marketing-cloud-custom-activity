@@ -52,6 +52,15 @@ exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     activityUtils.logData( req );
     console.log(req.body);
-    notificationsController.create(req, res);
+
+    var aArgs = req.body.inArguments;
+    var notification = {};
+    for (var i=0; i<aArgs.length; i++) {
+        for (var key in aArgs[i]) {
+            notification[key] = aArgs[i][key];
+        }
+    }
+
+    notificationsController.create(notification, res);
     res.send( 201, {"exitoso":true});
 };
