@@ -15,8 +15,8 @@
   "arguments": {
     "execute": {
       "inArguments":[
-        { "idUser": "{{Contact.Attributes.Capacitacion-Clientes-Sergio.IdCliente}}",
-          "idCampana": "{{Contact.Attributes.Capacitacion-Clientes-Sergio.IdCliente}}"
+        { "idUser": "{{Contact.Attribute.Capacitacion-Clientes-Sergio.IdCliente}}",
+          "idCampana": "{{Contact.Attribute.Capacitacion-Clientes-Sergio.IdCliente}}"
         }
       ],
       "outArguments": [
