@@ -51,6 +51,7 @@ exports.validate = function( req, res ) {
 exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     activityUtils.logData( req );
+    console.log(req.body);
     notificationsController.create(req, res);
     res.send( 201, {"exitoso":true});
 };
