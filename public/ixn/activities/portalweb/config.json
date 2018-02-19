@@ -15,8 +15,8 @@
   "arguments": {
     "execute": {
       "inArguments":[
-        { "idUser": "{{Contact.Attribute.Capacitacion-Clientes-Sergio.IdCliente}}"},
-        { "idCampana": "{{Contact.Attribute.Capacitacion-Clientes-Sergio.Nombre}}"}
+        { "idUser": "{{Capacitacion-Clientes-Sergio.IdCliente}}"},
+        { "idCampana": "{{Capacitacion-Clientes-Sergio.Nombre}}"}
       ],
       "outArguments": [
         { "exitoso":"boolean" }
